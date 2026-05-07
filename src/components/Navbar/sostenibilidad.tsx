@@ -18,12 +18,22 @@ const Sostenibilidad = () => {
             <li><span className="eco-icon">✔</span> Producción local ética</li>
           </ul>
         </div>
-
-        <div className="sostenibilidad-video-container">
-          <video controls className="video-player">
-            <source src="/mandinga ad prueba.mp4" type="video/mp4" />
-          </video>
-        </div>
+       <div className="sostenibilidad-video-container">
+  <iframe 
+    width="100%" 
+    height="400" 
+    src="https://www.youtube.com/embed/2_ntVE1pqes" 
+    title="La Mandinga - Sostenibilidad" 
+    frameBorder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowFullScreen
+    style={{ 
+      borderRadius: '20px', 
+      boxShadow: '0 15px 35px rgba(0,0,0,0.2)',
+      border: 'none'
+    }}
+  ></iframe>
+</div>
 
       </div>
     </section>
