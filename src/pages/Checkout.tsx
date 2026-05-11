@@ -47,8 +47,8 @@ const Checkout = () => {
       const { url } = await createCheckoutSession(items);
       closeCart();
       window.location.href = url;
-    } catch {
-      setError('No se pudo procesar el pago. Inténtalo de nuevo.');
+    } catch (err: any) {
+      setError(err?.message || 'No se pudo procesar el pago. Inténtalo de nuevo.');
       setIsLoading(false);
     }
   };

@@ -42,11 +42,26 @@ export const createCheckoutSession = async (
       cantidad,
     })),
   };
-  const response = await axios.post<CheckoutResponse>(
-    `${API_URL}/checkout`,
-    payload
-  );
-  return response.data;
+  try {
+    const response = await axios.post<CheckoutResponse>(
+      `${API_URL}/checkout`,
+      payload
+    );
+    return response.data;
+  } catch (err: any) {
+    // Extraemos el mensaje real del servidor para poder diagnosticar
+    const serverMsg =
+      err?.response?.data?.message ||
+      err?.response?.data ||
+      err?.message ||
+      'Error desconocido';
+    console.error('[Checkout] Error al crear sesión:', {
+      status: err?.response?.status,
+      data: err?.response?.data,
+      message: serverMsg,
+    });
+    throw new Error(String(serverMsg));
+  }
 };
 
 export const getSessionStatus = async (
