@@ -77,3 +77,33 @@
   font-size: 1.5rem;
   color: #76b82a;
 }
+
+@media screen and (max-width: 768px) {
+  .sobre-hero {
+    height: 350px;
+  }
+
+  .sobre-hero-overlay {
+    padding-top: 70px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .sobre-hero-overlay h1 {
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+    text-align: center;
+  }
+
+  .sobre-hero-overlay p {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sobre-hero-overlay h1 {
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+  }
+}
