@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero';
 import Footer from './components/footer/Footer';
@@ -26,6 +27,7 @@ function App() {
           <CartDrawer />
           <CartFab />
 
+          <main style={{ paddingTop: '80px' }}>
           <Routes>
             <Route path="/" element={
               <>
@@ -42,6 +44,7 @@ function App() {
             <Route path="/success" element={<Success />} />
             <Route path="/admin" element={<Admin />} />
           </Routes>
+          </main>
 
           <Footer />
         </div>
