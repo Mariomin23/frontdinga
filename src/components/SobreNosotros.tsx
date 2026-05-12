@@ -1,4 +1,3 @@
-import React from 'react';
 import './SobreNosotros.css';
 
 const SobreNosotros = () => {
@@ -33,12 +32,13 @@ const SobreNosotros = () => {
         </div>
         <div style={{ background: 'white', padding: '30px', borderRadius: '15px', boxShadow: '0 8px 15px rgba(0,0,0,0.1)', width: '250px' }}>
           <img
-            src="https://www.oeko-tex.com/fileadmin/user_upload/OEKO-TEX_Labels/STANDARD_100/STANDARD_100_by_OEKO-TEX_Label_ENG.png"
+            src="https://getlogovector.com/wp-content/uploads/2019/11/oeko-tex-confidence-in-textiles-standard-100-logo-vector.png"
             alt="OEKO-TEX Standard 100"
             style={{ height: '70px', objectFit: 'contain', marginBottom: '10px', display: 'block', margin: '0 auto 10px' }}
           />
           <h3 style={{ color: '#1a3a1a' }}>Sello OEKO-TEX</h3>
           <p style={{ fontSize: '0.9rem' }}>Certificación STANDARD 100: sin sustancias nocivas en ninguna parte de la prenda.</p>
+          <p style={{ fontSize: '0.85rem', marginTop: '8px', color: '#555' }}>Eco Passport&copy; &nbsp;|&nbsp; Made in Green&copy;</p>
         </div>
       </div>
     </div>
