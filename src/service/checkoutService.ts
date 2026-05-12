@@ -6,7 +6,7 @@ const API_URL = (import.meta as any).env.VITE_API_URL;
 // ── Types ──────────────────────────────────────────────────────────────────
 
 export interface CheckoutItem {
-  id: number;
+  id: string;
   nombre: string;
   precio: number;
   cantidad: number;

@@ -53,7 +53,7 @@ const Checkout = () => {
     }
   };
 
-  const shippingCost = 0;
+  const shippingCost: number = 0;
 
   return (
     <div className="co-page">

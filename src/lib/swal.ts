@@ -6,7 +6,6 @@ const base = Swal.mixin({
     cancelButton:  'swal-btn-cancel',
   },
   buttonsStyling: false,
-  borderRadius: '14px',
 });
 
 export const swalOk = (title: string, text?: string) =>
