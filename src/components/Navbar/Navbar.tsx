@@ -31,14 +31,6 @@ const Navbar = () => {
           <li><NavLink to="/productos" className="nav-links" onClick={closeMenu}>Productos</NavLink></li>
           <li><NavLink to="/nosotros" className="nav-links" onClick={closeMenu}>Sobre nosotros</NavLink></li>
 
-          {user?.role === 'admin' && (
-            <li>
-              <NavLink to="/admin" className="nav-links nav-admin" onClick={closeMenu}>
-                Admin
-              </NavLink>
-            </li>
-          )}
-
           {user ? (
             <>
               {user.role === 'admin' && (
