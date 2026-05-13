@@ -1,75 +1,63 @@
+# Fmandinga — Front La Mandinga
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Front tienda ropa deporte. React + Vite + TS. Deploy Vercel.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19 · TS · Vite 8
+- React Router v7 (rutas)
+- Axios (fetch API)
+- SweetAlert2 (popups)
+- React Hook Form (forms)
+- js-cookie (cookies auth)
 
-## React Compiler
+## Arrancar
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Build
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
 ```
+
+## Variables entorno
+
+Crear `.env` en raíz:
+
+```
+VITE_API_URL=http://localhost:5000/api
+```
+
+## Páginas
+
+| Ruta | Qué hace |
+|------|----------|
+| `/` | Home (Hero + SobreNosotros) |
+| `/productos` | Catálogo con filtro categoría |
+| `/checkout` | Pago pedido |
+| `/login` | Login |
+| `/register` | Registro |
+| `/perfil` | Datos usuario |
+| `/admin` | Panel admin |
+| `/success` | Confirmación compra |
+| `/aviso-legal` | Legal |
+
+## Estructura
+
+```
+src/
+├── components/   # Navbar, Cart, Hero, Footer...
+├── pages/        # Una carpeta por página
+├── context/      # CartContext
+└── service/      # authService, productService
+```
+
+## Deploy
+
+Vercel. Push main = redeploy auto.
+URL prod: https://lamandinga.tripleeme.es
