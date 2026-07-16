@@ -113,3 +113,9 @@ El proyecto está desplegado en **Vercel**.
 
 - **URL de producción**: https://lamandinga.tripleeme.es
 - Cualquier push a `main` genera un redeploy automático.
+
+## Equipo
+
+Proyecto final del bootcamp de Neoland (TFM), elegido 🏆 mejor proyecto de la promoción 2026.
+Co-desarrollado por [Mario Minuesa](https://github.com/Mariomin23) y [Fernando Pardo](https://github.com/pardo133).
+Backend: [backdinga](https://github.com/Mariomin23/backdinga).
