@@ -4,7 +4,7 @@ Tienda online de ropa deportiva. Desarrollado con React + Vite + TypeScript y de
 
 ## Tecnologías
 
-- **React 19** + **TypeScript** + **Vite 8**
+- **React 19** + **TypeScript** + **Vite 5**
 - **React Router v7** — navegación entre páginas
 - **Axios** — peticiones a la API
 - **React Hook Form** — gestión de formularios
